@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, Dr. {{ user.first_name }} {{ user.last_name }}</h1>
+    <a href="{% url 'create_blog_post' %}">Create Blog</a>
+    <a href="{% url 'my_blog_posts' %}">View My Blogs</a>
+</body>
+</html>

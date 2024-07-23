@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <title>{% block title %}My Site{% endblock %}</title>
+    {% load static %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors List</title>
+</head>
+<body>
+    <h2>Doctors List</h2>
+    <ul>
+        <ul>
+            {% for doctor in doctors %}
+                <li>
+                    <img src="{{ doctor.profile_picture.url }}" alt="{{ doctor.get_full_name }}" width="100">
+                    <p>{{ doctor.get_full_name }}</p>
+                    <a href="{% url 'book_appointment' doctor.id %}">Book Appointment</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+    </html>
+    

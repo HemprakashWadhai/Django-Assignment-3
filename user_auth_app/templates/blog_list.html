@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog List</title>
+</head>
+<body>
+    <h2>All Blogs</h2>
+    {% for category, posts in blogs.items %}
+        <h3>{{ category }}</h3>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" width="100">
+                    <h4>{{ post.title }}</h4>
+                    <p>{{ post.summary|truncatewords:15 }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
